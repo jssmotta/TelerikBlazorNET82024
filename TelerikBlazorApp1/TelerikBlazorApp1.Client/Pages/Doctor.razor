@@ -1,0 +1,14 @@
+﻿@page "/doctor"
+@using Microsoft.AspNetCore.Components.Sections
+<h3>Doctor</h3>
+
+
+<SectionContent SectionName="PersonName">
+    @_doctorName
+</SectionContent>
+
+@code {
+
+    string _doctorName = "Dr. John Doe";
+
+}

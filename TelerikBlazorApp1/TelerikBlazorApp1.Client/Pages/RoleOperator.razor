@@ -1,0 +1,37 @@
+﻿ @page "/roleoperator"
+ @using Microsoft.AspNetCore.Components.QuickGrid
+
+<QuickGrid Items="@_roles">
+    <PropertyColumn Property="@(p => p.Id)" Sortable="true" />
+    <PropertyColumn Property="@(p => p.Name)" Sortable="true" />
+    <TemplateColumn Title="View">
+        @context.View
+    </TemplateColumn>
+</QuickGrid>
+
+@code {
+
+private record RoleOperators(int Id, string Name)
+{
+    public MarkupString View => (MarkupString) $"<a class='k-button' href='/roleusers/{Id}'>View</a>";
+}
+
+private readonly IQueryable<RoleOperators> _roles = new List<RoleOperators>
+ {
+     new (1, "Root"),
+     new (2, "Admin"),
+     new (3, "Operator"),
+     new (4, "Doctor"),
+     new (5, "Patient"),
+     new (6, "Nurse"),
+     new (7, "Lab"),
+     new (8, "Pharmacy"),
+     new (9, "Billing"),
+     new (10, "Receptionist"),
+     new (11, "Accountant"),
+     new (12, "Cashier"),
+     new (14, "Insurance Agent")
+ }.AsQueryable();
+
+    
+ }

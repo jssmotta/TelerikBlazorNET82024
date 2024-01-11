@@ -1,0 +1,70 @@
+﻿@page "/roleusers/{id:int}"
+@using Microsoft.AspNetCore.Components.QuickGrid
+
+<h3>Role Users</h3>
+
+<QuickGrid Items="@People">
+    <PropertyColumn Property="@(p => p.Id)" Sortable="true" />
+    <PropertyColumn Property="@(p => p.Name)" Sortable="true" />
+    <TemplateColumn Title="View">
+        @context.View
+    </TemplateColumn>
+</QuickGrid>
+
+@code {
+
+
+    private record Person(int Id, string Name)
+    {
+        public MarkupString View => (MarkupString)$"<a class='k-button fa-edit' href='/operator/{Id}'>View</a>";
+    }
+
+
+    [Parameter]
+    public int Id { get; set; }
+
+    private IQueryable<Person> People
+    {
+        get
+        {
+            if (this.Id == 1)
+            {
+                return new List<Person>
+                {
+                    new(1, "Jefferson S. Motta"),
+                }.AsQueryable();
+            }
+
+
+            return new List<Person>
+                {
+                    new(2, "John Doe"),
+                    new(3, "Jane Doe"),
+                    new(4, "Dr. John Doe"),
+                    new(5, "Dr. Jane Doe"),
+                    new(6, "Nurse John Doe"),
+                    new(7, "Nurse Jane Doe"),
+                    new(8, "Lab John Doe"),
+                    new(9, "Lab Jane Doe"),
+                    new(10, "Pharmacy John Doe"),
+                    new(11, "Pharmacy Jane Doe"),
+                    new(12, "Billing John Doe"),
+                    new(13, "Billing Jane Doe"),
+                    new(14, "Receptionist John Doe"),
+                    new(15, "Receptionist Jane Doe"),
+                    new(16, "Accountant John Doe"),
+                    new(17, "Accountant Jane Doe"),
+                    new(18, "Cashier John Doe"),
+                    new(19, "Cashier Jane Doe"),
+                    new(20, "Insurance Agent John Doe"),
+                    new(21, "Insurance Agent Jane Doe"),
+                }.AsQueryable();
+
+
+        }
+    }
+
+
+
+}
+

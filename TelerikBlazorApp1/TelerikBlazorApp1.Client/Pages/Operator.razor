@@ -1,0 +1,17 @@
+﻿@page "/operator/{id:int}"
+@using Microsoft.AspNetCore.Components.Sections
+<h3>Operator</h3>
+<SectionContent SectionName="PersonName">
+    @_operName
+</SectionContent>
+
+
+<h3>This page is under construction!</h3>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    string _operName => Id == 1 ? "Jefferson S. Motta" : "Other person";
+
+}

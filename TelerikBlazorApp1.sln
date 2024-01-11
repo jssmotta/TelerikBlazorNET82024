@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelerikBlazorApp1", "TelerikBlazorApp1\TelerikBlazorApp1\TelerikBlazorApp1.csproj", "{DDF037DF-BAD2-4D92-A4FD-0B33C8FB0B82}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelerikBlazorApp1.Client", "TelerikBlazorApp1\TelerikBlazorApp1.Client\TelerikBlazorApp1.Client.csproj", "{34943597-B84B-4E21-9269-A0C227AA5F3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DDF037DF-BAD2-4D92-A4FD-0B33C8FB0B82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDF037DF-BAD2-4D92-A4FD-0B33C8FB0B82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDF037DF-BAD2-4D92-A4FD-0B33C8FB0B82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDF037DF-BAD2-4D92-A4FD-0B33C8FB0B82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34943597-B84B-4E21-9269-A0C227AA5F3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34943597-B84B-4E21-9269-A0C227AA5F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34943597-B84B-4E21-9269-A0C227AA5F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34943597-B84B-4E21-9269-A0C227AA5F3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6BAE560-6161-473C-BA77-CD72E3013C5E}
+	EndGlobalSection
+EndGlobal
